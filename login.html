@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    html, body { 
+  margin: 0; 
+  display: flex;
+  flex-direction: column; 
+}
+
+body {
+  min-height: 100vh; 
+  background-color: orange;
+  font-family: roboto, sans-serif;
+}
+
+main {
+  flex-grow: 1; 
+}
+     header {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    header.scrolled {
+      background: linear-gradient(135deg, #0056b3, #003b73);
+    }
+
+    .navbar-brand {
+      color: #ffffff !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .navbar-brand:hover {
+      color: #ffd700 !important;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      padding: 15px 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+      border-bottom: 2px solid #ffd700;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+  
+
+    .nav-item.active .nav-link {
+      color: #ffd700 !important;
+      font-weight: bold;
+    }
+
+    
+   
+    .navbar-brand, .nav-link {
+      color: #ffffff !important;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+    .login-form {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      background-color: #0056b3;
+      color: #ffffff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: auto;
+    }
+
+    footer a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+      .nav-link {
+        padding: 10px 15px;
+      }
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section p {
+        font-size: 1rem;
+      }
+
+      .card img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Free Wheels Car Rental BG</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Начало</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cars.html">Автомобили</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="login-form">
+    <h2>Вход в платформата</h2>
+    <form action="/login" method="POST">
+      <div class="mb-3">
+        <label for="username" class="form-label">Потребителско име</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+       <div class="mb-3">
+      <label for="email" class="form-label">Имейл</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Телефонен номер</label>
+      <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" placeholder="" required>
+    </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Парола</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Влез</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="container text-center">
+      <p>© 2024 Free Wheels Car Rental BG. Всички права запазени. | <a href="#">Условия за ползване</a></p>
+      <div class="social-buttons">
+        
+        <a href="https://maps.app.goo.gl/mMwjCLpER47aKyvG7" target="_blank" class="btn btn-dark">
+          <i class="bi bi-map"></i> Карта
+      </a>
+      
+      <a href="https://www.facebook.com/uevarna" target="_blank" class="btn btn-dark">
+          <i class="bi bi-facebook"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/uevarna/" target="_blank" class="btn btn-dark">
+          <i class="bi bi-instagram"></i> Instagram
+      </a>
+      <a href="https://twitter.com/uevarna" target="_blank" class="btn btn-dark">
+          <i class="bi bi-twitter"></i> Twitter
+      </a>    
+      </div>
+    </div>
+  </footer> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
